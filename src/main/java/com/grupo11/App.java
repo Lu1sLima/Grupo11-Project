@@ -1,4 +1,5 @@
 package com.grupo11;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -6,6 +7,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
 Exemplo simples de uso da API Apache Commons CVS
@@ -41,6 +44,14 @@ public class App {
             }
         }
         //testing if the class work as expected
+        Passageiro passageiro1 = new Passageiro("462426","luis", FormaPagamento.DINHEIRO, "34234324");
+        Passageiro passageiro2 = new Passageiro("434333","adilson", FormaPagamento.DINHEIRO, "33232");
+        List<Passageiro> passageiros = new ArrayList<>();
+        passageiros.add(passageiro1);
+        passageiros.add(passageiro2);
+
+    
+        PersistenciaPassageiros.persistePassageiros(passageiros);
         System.out.println(PersistenciaPassageiros.carregaPassageiros());
     }
 }
