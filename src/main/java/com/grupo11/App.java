@@ -19,6 +19,7 @@ Para executar: java -cp .;.\commons-csv-1.7.jar App.java
 public class App {
     private static final String SAMPLE_CSV_FILE_PATH = System.getProperty("user.dir")+"\\resources\\veiculos.dat";
     public static void main(String[] args) throws IOException {
+        
         try (
             Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
@@ -39,5 +40,7 @@ public class App {
                 System.out.println("---------------\n\n");
             }
         }
+        //testing if the class work as expected
+        System.out.println(PersistenciaPassageiros.carregaPassageiros());
     }
 }
