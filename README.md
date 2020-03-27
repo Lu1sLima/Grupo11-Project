@@ -2,6 +2,6 @@
 
 HOW TO RUN THE PROJECT:
 
-MVN PACKAGE - WAIT TO FINISH DOWNLOADS
+mvn package (Espera os downloads)
 
-MVN EXEC:JAVA - TO RUN APP.JAVA
+mvn exec:java (Para executar o App.java)
