@@ -50,6 +50,8 @@ public class App {
         passageiros.add(passageiro1);
         passageiros.add(passageiro2);
 
+        
+
     
         PersistenciaPassageiros.persistePassageiros(passageiros);
         System.out.println(PersistenciaPassageiros.carregaPassageiros());
