@@ -1,6 +1,4 @@
-import java.util.List;
-
-import com.grupo11.CategoriaVeiculo;
+package com.grupo11;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +6,6 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Reader;
@@ -26,7 +23,7 @@ public class PersistenciaVeiculos{
                 Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));
                 CSVParser data = new CSVParser(reader, CSVFormat.DEFAULT);
         ) {
-            for (CSVParser veiculo : data) {
+            for (CSVRecord veiculo : data) {
                 String placa = veiculo.get(0);
                 String marca = veiculo.get(1);
                 String cor = veiculo.get(2);
