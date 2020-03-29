@@ -19,4 +19,11 @@ public class Veiculo{
     public String getMarca(){ return marca; }
     public String getCor(){ return cor; }
     public CategoriaVeiculo getCategoriaVeiculo(){ return categoria; }
+
+    @Override
+    public String toString() {
+        return "Veiculo [categoria=" + categoria + ", cor=" + cor + ", marca=" + marca + ", placa=" + placa + "]";
+    }
+
+    
 }
