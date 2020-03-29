@@ -44,16 +44,41 @@ public class App {
             }
         }
         //testing if the class work as expected
-        Passageiro passageiro1 = new Passageiro("462426","luis", FormaPagamento.DINHEIRO, "34234324");
-        Passageiro passageiro2 = new Passageiro("434333","adilson", FormaPagamento.DINHEIRO, "33232");
-        List<Passageiro> passageiros = new ArrayList<>();
-        passageiros.add(passageiro1);
-        passageiros.add(passageiro2);
-
-        
-
+        // Passageiro passageiro1 = new Passageiro("462426","luis", FormaPagamento.DINHEIRO, "34234324");
+        // Passageiro passageiro2 = new Passageiro("434333","adilson", FormaPagamento.DINHEIRO, "33232");
+        // List<Passageiro> passageiros = new ArrayList<>();
+        // passageiros.add(passageiro1);
+        // passageiros.add(passageiro2);
     
-        PersistenciaPassageiros.persistePassageiros(passageiros);
-        System.out.println(PersistenciaPassageiros.carregaPassageiros());
+        // PersistenciaPassageiros.persistePassageiros(passageiros);
+        // System.out.println(PersistenciaPassageiros.carregaPassageiros());
+
+
+
+        // List<Veiculo> veiculos = new ArrayList<>();
+        // Veiculo v1 = new Veiculo("IXE1231", "VW", "Branco", CategoriaVeiculo.LUXO);
+        // Veiculo v2 = new Veiculo("IXEWQ1", "FD", "Preto", CategoriaVeiculo.NORMAL);
+        // veiculos.add(v1);
+        // veiculos.add(v2);
+
+        // PersistenciaVeiculos.persisteVeiculos(veiculos);
+
+        // System.out.println(PersistenciaVeiculos.carregaVeiculos());
+
+
+        List<Veiculo> veiculos = PersistenciaVeiculos.carregaVeiculos();
+        List<Motorista> motoristas = new ArrayList<>();
+        Veiculo v1 = veiculos.get(0);
+        Motorista m1 = new Motorista("1321312", "Luis", v1, FormaPagamento.TODAS);
+
+        Veiculo v2 = veiculos.get(1);
+        Motorista m2 = new Motorista("21321312", "Lucas", v2, FormaPagamento.DINHEIRO);
+
+        motoristas.add(m1);
+        motoristas.add(m2);
+        PersistenciaMotorista.persisteMotorista(motoristas);
+
+        System.out.println(PersistenciaMotorista.carregaMotoristas());
+
     }
 }
