@@ -2,6 +2,6 @@
 
 HOW TO RUN THE PROJECT:
 
-mvn compile (Espera os downloads)
+- mvn compile
 
-mvn exec:java (Para executar o App.java)
+- mvn exec:java (Para executar o App.java)
