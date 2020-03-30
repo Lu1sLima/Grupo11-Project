@@ -1,6 +1,6 @@
 # Grupo11-Project
 
-HOW TO RUN THE PROJECT:
+[HOW TO RUN THE PROJECT:]
 
 - mvn compile
 
